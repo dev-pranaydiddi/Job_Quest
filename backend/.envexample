@@ -1,0 +1,7 @@
+MONGO_URI="mongodb+srv://username:password@clustername.mongodb.net/"
+PORT="backend port number"
+CLOUD_NAME="Cloud Name"
+API_KEY="Cloudinary Api Key"
+API_SECRET="Api Secret"
+CLOUDINARY_URL="Cloudinary url"
+SECRET_KEY="Secret key for Jwt"
