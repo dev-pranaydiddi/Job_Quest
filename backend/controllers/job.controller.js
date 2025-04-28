@@ -11,11 +11,12 @@ export const postJob = async (req, res) => {
                 success: false
             })
         };
+        let salaryStr = salary.toString()+" LPA";
         const job = await Job.create({
             title,
             description,
             requirements: requirements.split(","),
-            salary: Number(salary),
+            salary: salaryStr,
             location,
             jobType,
             experienceLevel: experience,
