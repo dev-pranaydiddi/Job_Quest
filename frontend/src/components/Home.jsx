@@ -21,6 +21,7 @@ const Home = () => {
   return (
     <div>
       <Navbar />
+     
       <HeroSection />
       <CategoryCarousel />
       <LatestJobs />
