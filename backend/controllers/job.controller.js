@@ -12,6 +12,15 @@ export const postJob = async (req, res) => {
             })
         };
         let salaryStr = salary.toString()+" LPA";
+        let experienceStr = experience.toString()+" Years";
+        if (experienceStr === "0"){
+            experienceStr = "Fresher";
+        }else if (experienceStr === "1"){
+            experienceStr = experience + " years";
+        }else if (experienceStr === "2"){   
+            experienceStr = experience + "years";
+        }
+        
         const job = await Job.create({
             title,
             description,
@@ -19,7 +28,7 @@ export const postJob = async (req, res) => {
             salary: salaryStr,
             location,
             jobType,
-            experienceLevel: experience,
+            experienceLevel: experienceStr,
             position,
             company: companyId,
             created_by: userId
